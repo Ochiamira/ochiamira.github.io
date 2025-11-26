@@ -45,52 +45,32 @@
         }
 
         /* ───────── NAVBAR ───────── */
-        .nav {
+        .navbar-jessem {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-            margin-bottom: 18px;
-        }
-
-        .nav-left {
-            display: flex;
             align-items: center;
-            gap: 10px;
+            padding: 15px 45px;
+            background: white;
+            border-bottom: 1px solid #eaeaea;
+            font-family: "Segoe UI", Arial, sans-serif;
         }
-
-        .logo-circle {
-            width: 34px;
-            height: 34px;
-            border-radius: 999px;
-            background: radial-gradient(circle at 30% 0, #e5e7eb, #0f172a);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: #020617;
-            border: 1px solid rgba(148,163,184,0.6);
+        
+        .navbar-name {
+            font-size: 20px;
+            font-weight: bold;
+            color: #16c172;
         }
-
-        .nav-name {
-            font-weight: 600;
-            letter-spacing: 0.03em;
-            font-size: 0.9rem;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 14px;
-            font-size: 0.85rem;
-        }
-
-        .nav-links a {
-            color: var(--muted);
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
+        
+        .navbar-links a {
+            margin-left: 25px;
             text-decoration: none;
+            font-size: 15px;
+            color: #222;
+            transition: 0.2s;
+        }
+        
+        .navbar-links a:hover {
+            color: #16c172;
         }
 
         /* ───────── HERO ───────── */
@@ -485,17 +465,18 @@
 <body>
 <div class="page">
     <!-- NAVBAR -->
-    <nav class="nav">
-        <div class="nav-left">
-            <div class="logo-circle">AO</div>
-            <div class="nav-name">Amira Ochi · Portfolio</div>
-        </div>
-        <div class="nav-links">
-            <a href="#projects">Projects</a>
-            <a href="#experience">Experience</a>
-            <a href="#skills">Skills</a>
-            <a href="#contact">Contact</a>
-        </div>
+    <nav class="navbar-jessem">
+      <div class="navbar-name">
+        It’s Amira Ochi !
+      </div>
+    
+      <div class="navbar-links">
+        <a href="#projects">Projets</a>
+        <a href="#experience">Parcours</a>
+        <a href="#education">Formations</a>
+        <a href="#skills">Compétences</a>
+        <a href="#contact">Contact</a>
+      </div>
     </nav>
 
     <!-- HERO / INTRO -->
