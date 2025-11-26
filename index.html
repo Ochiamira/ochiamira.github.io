@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Amira Ochi | Embedded Systems & Industrial Computing</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card: #0b1120;
+            --accent: #38bdf8;
+            --text: #e5e7eb;
+            --muted: #9ca3af;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #1f2937 0, #020617 55%);
+            color: var(--text);
+        }
+
+        .wrapper {
+            max-width: 1040px;
+            margin: 40px auto;
+            padding: 0 16px 48px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, rgba(56,189,248,0.12), rgba(15,23,42,0.98));
+            border-radius: 18px;
+            padding: 28px 24px;
+            border: 1px solid rgba(148,163,184,0.25);
+            box-shadow: 0 22px 45px rgba(15,23,42,0.75);
+        }
+
+        h1, h2, h3 {
+            margin: 0 0 8px;
+        }
+
+        h1 {
+            font-size: 1.9rem;
+            letter-spacing: 0.03em;
+        }
+
+        h2 {
+            margin-top: 24px;
+            font-size: 1.25rem;
+            border-bottom: 1px solid rgba(148,163,184,0.4);
+            padding-bottom: 4px;
+        }
+
+        h3 {
+            font-size: 1.02rem;
+        }
+
+        p {
+            margin: 4px 0 8px;
+            line-height: 1.55;
+        }
+
+        .muted { color: var(--muted); }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .headline {
+            max-width: 520px;
+        }
+
+        .tagline {
+            margin-top: 6px;
+            font-size: 0.95rem;
+        }
+
+        .contact {
+            text-align: right;
+            font-size: 0.9rem;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            border-radius: 999px;
+            padding: 3px 10px;
+            font-size: 0.78rem;
+            border: 1px solid rgba(148,163,184,0.55);
+            margin-left: 4px;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        a:hover { text-decoration: underline; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: minmax(0, 2fr) minmax(0, 1.2fr);
+            gap: 24px;
+            margin-top: 12px;
+        }
+
+        .pill-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+        }
+
+        .pill {
+            border-radius: 999px;
+            border: 1px solid rgba(148,163,184,0.45);
+            padding: 3px 9px;
+            font-size: 0.75rem;
+            color: var(--muted);
+        }
+
+        .project {
+            padding: 12px 0;
+            border-bottom: 1px dashed rgba(148,163,184,0.35);
+        }
+
+        .project:last-child {
+            border-bottom: none;
+        }
+
+        .project-meta {
+            font-size: 0.8rem;
+            color: var(--muted);
+            margin-bottom: 4px;
+        }
+
+        .section-list {
+            font-size: 0.92rem;
+        }
+
+        .section-list li {
+            margin-bottom: 4px;
+        }
+
+        ul { padding-left: 18px; }
+
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+            .contact {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <div class="card">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="headline">
+                <h1>Amira Ochi</h1>
+                <p class="tagline">
+                    Final-year Electrical & Industrial Computing engineering student,
+                    specialized in <strong>embedded systems</strong>, <strong>IoT</strong>,
+                    and <strong>Python development</strong>. I design and implement
+                    STM32/ESP32-based systems, smart sensing solutions, and intelligent
+                    software pipelines for real-world industrial and biomedical use cases.
+                </p>
+                <div class="pill-bar">
+                    <span class="pill">Embedded Systems (STM32 / ESP32 / Arduino)</span>
+                    <span class="pill">IoT & Wireless Communication</span>
+                    <span class="pill">Python, C/C++</span>
+                    <span class="pill">Signal Processing & Biomedical</span>
+                    <span class="pill">Computer Vision & CNN</span>
+                </div>
+            </div>
+
+            <div class="contact">
+                <div><strong>Monastir, Tunisia</strong></div>
+                <div><a href="mailto:amiraochi1234@gmail.com">amiraochi1234@gmail.com</a></div>
+                <div class="muted">GitHub: <a href="https://github.com/Ochiamira" target="_blank">Ochiamira</a></div>
+                <div class="chip">Languages: French · English · Arabic</div>
+            </div>
+        </header>
+
+        <!-- LAYOUT -->
+        <div class="grid">
+            <!-- LEFT COLUMN: PROJECTS -->
+            <main>
+                <h2>Selected Projects</h2>
+
+                <!-- Smart House -->
+                <section class="project">
+                    <h3>Smart House – Intelligent IoT System</h3>
+                    <div class="project-meta">STM32 / ESP32 · Multi-sensor · FastAPI · Real-time Web Dashboard</div>
+                    <p>
+                        Design of a complete smart-home platform using STM32/ESP32 boards and multiple sensors
+                        (temperature, motion, light). Implementation of UART/Wi-Fi communication, data acquisition
+                        and forwarding to a FastAPI backend. Development of a web-based interface for real-time
+                        visualization and control of the environment.
+                    </p>
+                    <div class="pill-bar">
+                        <span class="pill">STM32</span>
+                        <span class="pill">ESP32</span>
+                        <span class="pill">UART / Wi-Fi</span>
+                        <span class="pill">FastAPI</span>
+                        <span class="pill">Real-time Web UI</span>
+                    </div>
+                </section>
+
+                <!-- Migration Microchip -> STM32 -->
+                <section class="project">
+                    <h3>Automatic Migration of Microchip Projects to STM32</h3>
+                    <div class="project-meta">AST Parsing · LLM · JSON Feature Extraction · STM32 HAL</div>
+                    <p>
+                        Development of a smart pipeline that parses legacy embedded code bases (Microchip, ESP,
+                        Arduino, PIC) using AST analysis and leverages large language models to automatically detect
+                        drivers, extract hardware-related features into JSON files, and generate mapping specifications
+                        towards STM32 HAL APIs. The goal is to accelerate firmware migration across MCU families.
+                    </p>
+                    <div class="pill-bar">
+                        <span class="pill">AST Parsing</span>
+                        <span class="pill">Python</span>
+                        <span class="pill">LLM Integration</span>
+                        <span class="pill">STM32 HAL</span>
+                        <span class="pill">Code Generation</span>
+                    </div>
+                </section>
+
+                <!-- ECG + ESP32 -->
+                <section class="project">
+                    <h3>Biomedical ECG Sensor – ESP32</h3>
+                    <div class="project-meta">AD8232 · Analog Front-end · Filtering · Wireless Transmission</div>
+                    <p>
+                        Integration of the AD8232 ECG front-end with an ESP32 microcontroller for cardiac signal
+                        acquisition. Implementation of ADC sampling, digital filtering (noise reduction and baseline
+                        stabilization), and wireless transmission (UART/Wi-Fi) for real-time waveform monitoring and
+                        analysis of heart activity.
+                    </p>
+                    <div class="pill-bar">
+                        <span class="pill">ESP32</span>
+                        <span class="pill">AD8232</span>
+                        <span class="pill">Signal Processing</span>
+                        <span class="pill">Wi-Fi / UART</span>
+                    </div>
+                </section>
+
+                <!-- IA Vision Jetson -->
+                <section class="project">
+                    <h3>Industrial Cable Inspection – Vision AI on Jetson Nano</h3>
+                    <div class="project-meta">Jetson Nano · CNN · Anomaly Detection · Industrial Vision</div>
+                    <p>
+                        Implementation of a convolutional neural network on a Jetson Nano platform to recognize
+                        industrial cables and detect visual anomalies. The system includes automatic tuning of visual
+                        parameters such as saturation and contrast to maintain robust detection in varying lighting
+                        conditions.
+                    </p>
+                    <div class="pill-bar">
+                        <span class="pill">Jetson Nano</span>
+                        <span class="pill">CNN</span>
+                        <span class="pill">Computer Vision</span>
+                        <span class="pill">Python</span>
+                    </div>
+                </section>
+
+                <!-- Face Recognition Access Control -->
+                <section class="project">
+                    <h3>Access Control System with Face Recognition</h3>
+                    <div class="project-meta">Python · OpenCV · Embedded Security</div>
+                    <p>
+                        Development of an embedded security system using Python and OpenCV for real-time face
+                        recognition. The project detects intruders, manages access control rules, and triggers
+                        automated email alerts when suspicious activity is detected.
+                    </p>
+                    <div class="pill-bar">
+                        <span class="pill">OpenCV</span>
+                        <span class="pill">Face Recognition</span>
+                        <span class="pill">Email Alerts</span>
+                    </div>
+                </section>
+            </main>
+
+            <!-- RIGHT COLUMN: EXPERIENCE / SKILLS -->
+            <aside>
+                <h2>Experience</h2>
+                <section class="section-list">
+                    <h3>Kromberg &amp; Schubert Tunisia</h3>
+                    <p class="muted">Engineering Internship · Jul 2025 – Aug 2025</p>
+                    <ul>
+                        <li>Optimised an AI-based vision machine to improve cable detection and validation.</li>
+                        <li>Developed a Qt interface for visualization and validation of the correction process.</li>
+                    </ul>
+
+                    <h3>STEG – Tunisian Company of Electricity &amp; Gas</h3>
+                    <p class="muted">Worker Internship · Jul 2024 – Aug 2024</p>
+                    <ul>
+                        <li>Observed and assisted in maintenance of high-voltage installations.</li>
+                        <li>Studied protection mechanisms to improve electrical network safety.</li>
+                    </ul>
+                </section>
+
+                <h2>Education</h2>
+                <section class="section-list">
+                    <h3>National Engineering School of Monastir (ENIM)</h3>
+                    <p class="muted">Engineering Cycle – Electrical Engineering &amp; Industrial Computing<br/>2023 – Present</p>
+
+                    <h3>IPEIEM – El Manar</h3>
+                    <p class="muted">Preparatory Cycle – Mathematics &amp; Physics<br/>2021 – 2023</p>
+                </section>
+
+                <h2>Technical Skills</h2>
+                <section class="section-list">
+                    <ul>
+                        <li><strong>Programming:</strong> C/C++, Python, VHDL, Java</li>
+                        <li><strong>Embedded Systems:</strong> STM32, ESP32, Arduino, Jetson Nano, Raspberry Pi, FreeRTOS, Linux</li>
+                        <li><strong>Sensing &amp; Instrumentation:</strong> IoT sensors, signal processing, filtering, biomedical sensors</li>
+                        <li><strong>Tools:</strong> Qt Creator, Proteus, StarUML, Git, STM32CubeIDE, MATLAB/Simulink</li>
+                        <li><strong>Frameworks:</strong> HuggingFace Transformers, FastAPI</li>
+                        <li><strong>Computer Vision &amp; AI:</strong> CNNs, image processing &amp; classification, OpenCV</li>
+                        <li><strong>Protocols:</strong> I²C, SPI, UART</li>
+                    </ul>
+                </section>
+
+                <h2>Soft Skills</h2>
+                <section class="section-list">
+                    <ul>
+                        <li>Teamwork &amp; communication</li>
+                        <li>Rigorous and autonomous</li>
+                        <li>Strong interest in applied AI &amp; embedded innovation</li>
+                    </ul>
+                </section>
+            </aside>
+        </div>
+    </div>
+</div>
+</body>
+</html>
