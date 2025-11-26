@@ -397,35 +397,60 @@
         }
 
         /* ───────── SKILLS ───────── */
+
         .skills-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-            gap: 8px;
-            margin-top: 6px;
-        }
-
-        .skill-block {
-            padding: 20px 22px;
-            border-radius: 20px;
-            background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
-            border: 1px solid rgba(148,163,184,0.3);
-            font-size: 0.85rem;
-            box-shadow: 0 10px 30px rgba(15,23,42,0.05);
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 26px;
+            margin-top: 24px;
         }
         
-        .skill-block h3 {
-            margin: 0 0 4px;
-            font-size: 0.8rem;
-            color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
+        .skill-card {
+            background: linear-gradient(to bottom, #f9fafb, #f3f4f6);
+            border-radius: 22px;
+            padding: 26px 26px 30px;
+            box-shadow: 0 14px 30px rgba(15,23,42,0.08);
+            text-align: center;
+            border: 1px solid rgba(148,163,184,0.35);
+            transition: transform 0.15s ease, box-shadow 0.18s ease;
+        }
+        
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 45px rgba(15,23,42,0.12);
+        }
+        
+        .skill-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .skill-card h3 {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+        
+        .skill-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: left;
+        }
+        
+        .skill-card li {
+            margin: 8px 0;
+            font-size: 0.82rem;
+            display: flex;
+            gap: 8px;
+            align-items: center;
+        }
+        
+        .skill-card li::before {
+            content: "✔";
+            color: #22c55e;
+            font-weight: bold;
         }
 
-        .skill-block p {
-            margin: 0;
-            color: var(--text);
-            line-height: 1.45;
-        }
 
         /* ───────── FOOTER ───────── */
         footer {
